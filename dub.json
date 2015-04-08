@@ -1,0 +1,19 @@
+{
+	"name": "MaterialDoc",
+	"description": "",
+	"copyright": "Copyright © 2015, WebFreak001",
+	"authors": ["WebFreak001"],
+	"configurations": [
+	{
+		"name": "bin",
+		"targetType": "executable",
+		"targetPath": "bin",
+		"workingDirectory": "bin",
+		"sourcePaths": ["source/"],
+		"importPaths": ["source/"]
+	}],
+	"dependencies":
+	{
+		"jsonizer": "~>0.3.3"
+	}
+}

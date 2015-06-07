@@ -24,6 +24,7 @@ void generateDocumentation(string docDirectory, string outputDirectory, string d
 
 	string sidebar = "<ul class='sidebar'>";
 	string file;
+	string name;
 
 	string[string] files;
 
@@ -32,6 +33,9 @@ void generateDocumentation(string docDirectory, string outputDirectory, string d
 		if (entry.kind == "module")
 		{
 			file = entry.file[entry.file.lastIndexOf('\\') + 1 .. entry.file.lastIndexOf(".d")];
+			name = entry.name;
+			if(name.indexOf('.') != -1)
+				name = name[name.lastIndexOf('.') + 1 .. $];
 
 			if (!exists(docDirectory ~ file ~ ".html"))
 			{
@@ -41,7 +45,7 @@ void generateDocumentation(string docDirectory, string outputDirectory, string d
 
 			files[entry.name] = file;
 
-			sidebar ~= format("<a href='%s.html'><li title='%s'>%s</li></a>", entry.name, file, file);
+			sidebar ~= format("<a href='%s.html'><li title='%s'>%s</li></a>", entry.name, name, name);
 		}
 		else
 		{

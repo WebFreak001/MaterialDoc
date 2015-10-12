@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,400italic,500italic,400);
+body, html {
+	margin: 0;
+	padding: 0;
+	font: 11pt Roboto, sans-serif;
+	background-color: #eee;
+}
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-left: 200px;
+	height: 100%;
+}
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.sidebar li {
+	padding: 4px 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.sidebar li:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.sidebar a {
+	text-decoration: none;
+	color: black;
+}
+.doc_content {
+	background-color: white;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	padding: 16px;
+	margin: 24px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.d_code {
+	padding: 6px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+	background-color: #FAFAFA;
+}
+.d_inline_code {
+	padding: 2px;
+	background-color: #EEEEEE;
+}
+.blue {
+	/* Keyword */
+	
+	color: #0288D1;
+}
+.green {
+	/* Comment */
+	
+	color: #757575;
+}
+.red {
+	/* Strings */
+	
+	color: #3F51B5;
+}
+pre {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	-webkit-tab-size: 4;
+	-ms-tab-size: 4;
+	tab-size: 4;
+}
+hr {
+	height: 1px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.12);
+}
+h1 {
+	color: #3F51B5;
+}
+h1, h2, h3, h4, h5, h6, b, strong {
+	font-weight: 500;
+	margin: 0;
+}

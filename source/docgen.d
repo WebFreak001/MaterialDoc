@@ -4,15 +4,12 @@ import std.stdio;
 import std.array;
 import std.string;
 import std.file;
+import std.json;
 
-import jsonizer;
-import jsonizer.fromjson;
+import painlessjson;
 
 struct DocumentationEntry
 {
-	mixin JsonizeMe;
-
- @jsonize:
 	string name;
 	string kind;
 	string file;
@@ -20,7 +17,7 @@ struct DocumentationEntry
 
 void generateDocumentation(string docDirectory, string outputDirectory, string docIndex, bool replaceColors, string style)
 {
-	auto   entries = readJSON!(DocumentationEntry[])(docIndex);
+	auto   entries = fromJSON!(DocumentationEntry[])(parseJSON(docIndex));
 
 	string sidebar = "<ul class='sidebar'>";
 	string file;
